@@ -11,6 +11,8 @@
     <string name="title_top_rate">Top Rate</string>
     <string name="title_popular">Popular</string>
     <string name="title_recommend">Recommend</string>
+    <string name="title_company">Companies</string>
+    <string name="title_actor">Actors</string>
 
     <string name="default_error">Error…!</string>
 
@@ -19,4 +21,5 @@
     <string name="text_search_input">Search for movie, genres, people</string>
     <string name="text_play_trailer">Play Trailer</string>
     <string name="text_more_like_this">MORE LIKE THIS</string>
+    <string name="text_time">%s minutes</string>
 </resources>

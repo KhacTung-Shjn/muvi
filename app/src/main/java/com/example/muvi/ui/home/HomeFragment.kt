@@ -1,5 +1,6 @@
 package com.example.muvi.ui.home
 
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.muvi.R
 import com.example.muvi.base.BaseFragment
@@ -8,6 +9,7 @@ import com.example.muvi.databinding.FragmentHomeBinding
 import com.example.muvi.ui.adpater.DiscoveryAdapter
 import com.example.muvi.ui.adpater.PosterAdapter
 import com.example.muvi.ui.adpater.BannerAdapter
+import com.example.muvi.ui.genres.GenresFragmentDirections
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
@@ -35,6 +37,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     private fun onItemPosterClick(movie: Movie) {
+        binding.apply {
+            navigateToList(movie.id)
+        }
+    }
 
+    private fun navigateToList(idMovie: Int) {
+        val action = HomeFragmentDirections.actionHomeFragmentToDetailMovieFragment(idMovie)
+        findNavController().navigate(action)
     }
 }
